@@ -1,0 +1,313 @@
+/* ########## Google Fonts  ########## */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+:root{
+    --main-color: #008148;
+    --second-color: #1e3932;
+}
+
+/* ########## Utility Classes  ########## */
+
+*::selection{
+    color: white;
+    background-color: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+img{
+    width: 100%;
+}
+
+/* ########## Navbar Styling  ########## */
+
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 40px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+/* ########## Home Styling  ########## */
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgb(218, 225, 134);
+    gap: 1rem;
+}
+.home-text{
+    flex: 1 1 17rem;
+}
+.home-text span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+    text-transform: uppercase;
+}
+.home-text h1{
+    color: var(--main-color);
+    font-size: 3.2rem;
+    font-weight: bolder;
+}
+.home-text h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0.5rem 0 1.4rem;
+}
+.home-btn{
+    color: var(--second-color);
+    border: 2px solid var(--second-color);
+    padding: 7px 16px;
+    border-radius: 40px;
+    font-weight: 500;
+}
+.home-btn:hover{
+    background-color: var(--second-color);
+    color: white;
+}
+.home-img{
+    flex: 1 1 17rem;
+}
+.home-img img{
+    width: 100%;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-11px, 0px);
+    }
+    50%{
+        transform: translate(-0px, -11px);
+    }
+    100%{
+        transform: translate(-11px, 0);
+    }
+}
+
+/* ########## Shop Styling  ########## */
+
+.shop-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+.shop-cards .card{
+    flex: 1 1 10rem;
+    background: var(--main-color);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+}
+.shop-cards .card .shop-img{
+    width: 150px;
+    height: 150px;
+    margin-top: -100px;
+}
+.shop-cards .card .shop-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.stars{
+    margin: 1rem 0 0.1rem;
+}
+.shop-cards .card .stars .bx{
+    color: white;
+}
+.shop-cards .card h4{
+    font-size: 1.2rem;
+    color: white;
+}
+.shop-cards .card span{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    margin: 0.2rem 0 0.5rem;
+}
+.shop-cards .card .shop-btn{
+    color: white;
+    border: 2px solid white;
+    padding: 7px 1rem;
+    border-radius: 40px;
+    font-weight: 500;
+}
+.shop-cards .card .shop-btn:hover{
+    color: var(--second-color);
+    background: white;
+}
+
+/* ########## Delivery & App Styling  ########## */
+
+.delivery-content,
+.app-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.delivery-img,
+.app-img{
+    flex: 1 1 21rem;
+}
+.delivery-text,
+.app-text{
+    flex: 1 1 21rem;
+}
+.delivery-text h2,
+.app-text h2{
+    color: var(--second-color);
+    font-size: 1.2rem;
+}
+.delivery-text p,
+.app-text p{
+    color: var(--second-color);
+    margin:  0.5rem 0 1rem;
+    text-align: justify;
+}
+.delivery-text .btn,
+.app-text .btn,
+.about-text .btn{
+    color: var(--second-color);
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    padding: 7px 1rem;
+    font-weight: 500;
+}
+.delivery-text .btn:hover,
+.app-text .btn:hover,
+.about-text .btn:hover{
+    color: white;
+    background: var(--second-color);
+}
+
+/* ########## About Styling  ########## */
+
+.about{
+    background-color: rgb(218, 225, 134);
+}
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.about-img{
+    flex: 1 1 17rem;
+}
+.about-text{
+    flex: 1 1 17rem;
+}
+.about-text h2{
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+.about-text p{
+    text-align: justify;
+    margin: 0.5rem 0 1rem;
+}
+
+/* ########## Contact Styling  ########## */
+
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: white;
+    background: black;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color)
+}
+.contact p{
+    text-align: center;
+}
